@@ -1,0 +1,54 @@
+
+.imageResults {
+    padding:11px;
+    margin:2px;
+    border:1px solid #cecece;
+
+}
+.imageResult {
+    width:  160px!important;
+    height: 160px!important;
+    border-radius:80px;
+    object-fit: cover!important;
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.91); 
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.91);
+    border:4px solid #4b4b4b;
+}
+
+.username {
+    font-size:11px;
+    padding:10px;
+    text-align:center;
+}
+
+.downloadLink {
+    width:30%;
+    float:left;
+}
+
+.slideFwd {
+	-webkit-animation: rotate-center 0.6s ease-in-out both;
+	        animation: rotate-center 0.6s ease-in-out both;
+}
+
+@-webkit-keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes rotate-center {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  

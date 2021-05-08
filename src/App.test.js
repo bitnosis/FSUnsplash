@@ -1,8 +1,11 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen, cleanup } from '@testing-library/react';
+import App from './components/App/App';
 
-test('renders learn react link', () => {
+afterEach(cleanup)
+
+test('renders search box on app', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const searchUnsplash = screen.getByText(/Enter a search term.../i)
+  expect(searchUnsplash).toBeInTheDocument();
+
 });
