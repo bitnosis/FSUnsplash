@@ -6,7 +6,7 @@ import FullScreenImage from './FullScreenImage.js'
 import './Search.css'
 
 const Search = ({unsplash, addToFavorites, removeFavorite}) => {
-    const Loading = () => <div className="tracking-in-expand w-full p-200 text-center mt-40 text-2xl">Searching...</div>
+    const Loading = () => <div className="tracking-in-expand w-full p-200 text-center mt-40 text-2xl bigHeight">Searching...</div>
     const Loaded = () => <ImageResults viewTheImage={viewTheImage} addToFavorites={addToFavorites} removeFavorite={removeFavorite} results={results} />
     const [query, setQuery] = useState("");
     const [results, setResults] = useState([]);
@@ -146,8 +146,8 @@ const Search = ({unsplash, addToFavorites, removeFavorite}) => {
           </div>
         </form>
         {isLoading && !firstSearch? <Loading /> : <Loaded />}
-        {firstSearch ? <div className="tracking-in-expand w-full p-200 text-gray-200 text-center mt-40 text-2xl">Search for something above</div> : <span></span>}
-        {searchExecuted && results.length<=0 ? <div className="tracking-in-expand w-full p-200 text-gray-200 text-center mt-40 text-2xl">No Results Found for '{query}'</div> : <span></span>}
+        {firstSearch ? <div className="tracking-in-expand w-full p-200 text-gray-200 text-center mt-40 text-2xl bigHeight">Search for something above</div> : <span></span>}
+        {searchExecuted && results.length<=0 ? <div className="tracking-in-expand w-full p-200 text-gray-200 text-center mt-40 text-2xl bigHeight">No Results Found for '{query}'</div> : <span></span>}
       </>
     )
 }

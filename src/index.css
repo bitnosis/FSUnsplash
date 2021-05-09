@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.bigHeight {
+    min-height:900px;
+}
 .myLogo {
     width:40px;
     height:40px;
