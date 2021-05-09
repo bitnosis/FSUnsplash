@@ -133,14 +133,14 @@ const Search = ({unsplash, addToFavorites, removeFavorite}) => {
         {viewImage!=null ? <FullScreenImage closeModal={closeModal} image={viewImage} /> : ""}
         
         <form onSubmit={enterSearch}>
-          <div className="shadow p-4 flex">
+          <div className="shadow p-4 flex dark:bg-black">
             <span className="w-auto flex justify-end items-center text-grey p-2">
                 <i className="material-icons text-3xl">search</i>
             </span>
             <input  
               value={query}
-              onChange={(e)=>changeQuery(e.target.value)} className="w-full mt-2 rounded p-2" type="text" placeholder="Try 'Lighthouse' or 'Dog'" />
-            <button className="bg-black hover:bg-red-lighter rounded text-white p-2 pl-4 pr-4">
+              onChange={(e)=>changeQuery(e.target.value)} className="ml-4 w-full mt-2 rounded p-2" type="text" placeholder="Try 'Lighthouse' or 'Dog'" />
+            <button className="ml-4 bg-black dark:bg-gray-700 hover:bg-red-lighter rounded text-white p-2 pl-4 pr-4">
                   <p className="font-semibold text-xl">Search</p>
             </button>
           </div>

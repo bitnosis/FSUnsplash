@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css'
 
 const unsplash = new Unsplash({ accessKey: "pTnrz6Mc2ruyLiiC1V5oC7ibUbJ3b6seLHH3EdTw8v0" })
 // Normally would do a .env variable here
+// Didnt wanna make you have to create a .env file
 //const unsplash = new Unsplash({ accessKey: process.env.REACT_APP_UNSPLASH_API_KEY })
 
 const App = () => {
@@ -72,7 +73,7 @@ const App = () => {
   }
 
   return (
-    <div className="App">
+    <div className="App dark:bg-gray-900">
       <Router>
         <ToastContainer />
         <NavBar favorite_count={favorites.length} />

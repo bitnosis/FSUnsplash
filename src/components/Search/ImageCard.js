@@ -13,8 +13,8 @@ const ImageCard = ({viewTheImage, addToFavorites, removeFavorite, image}) => {
     }
 
     return (
-        <div key="{image.id}" className="p-1 flex-fill bd-highlight">
-            <article className="overflow-hidden rounded-lg shadow-lg p-4">
+        <div key="{image.id}" className="p-1 flex-fill bd-highlight ">
+            <article className="overflow-hidden rounded-lg shadow-lg p-4 dark:bg-gray-700 dark:text-white">
                 <div className = "mt-2 cursor-pointer"  >
                     {isFavorite(image.id) ? <img title="Remove from favorites" onClick={()=>removeFavorite(image)} src={FavHeart} /> : <img title="Add to favorites" onClick={()=>addToFavorites(image)} src={FavPlus} />}
                 </div>
@@ -25,8 +25,8 @@ const ImageCard = ({viewTheImage, addToFavorites, removeFavorite, image}) => {
                     </center>
                 </header>
                 <footer className="flex items-center justify-between leading-none p-2 md:p-4">
-                        <a className="flex items-center no-underline hover:underline text-black" href="#">
-                            <img alt="Placeholder" className="block rounded-full" src={image.user.profile_image.small} />
+                        <a className="flex items-center no-underline hover:underline text-black dark:text-white" href="#">
+                            <img className="block rounded-full shadow-sm" src={image.user.profile_image.small} />
                             <a href={"user/"+image.user.username} className="ml-2 text-xs">
                                {image.user.username}
                             </a>

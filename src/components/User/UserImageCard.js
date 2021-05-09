@@ -10,7 +10,7 @@ const UserImageCard = ({addToFavorites, removeFavorite, image}) => {
     }
     return (
         <div className="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 slide-in-blurred-top">
-            <article className="overflow-hidden rounded-md shadow-lg">
+            <article className="overflow-hidden rounded-md shadow-lg dark:bg-gray-700 dark:text-white">
             <a href={image.links.download} target="_blank">
                 <img alt={image.alt_description} className="myImage object-cover favImage w-full" src={image.urls.regular} />
             </a>
